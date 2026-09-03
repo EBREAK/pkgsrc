@@ -135,6 +135,11 @@ CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .if ${OPSYS} == "Linux"
 # glibc limitations, needs at least -O1
 FORTIFY_SUPPORTED=	no
+# GCC's configure checks use -E (no optimization) but cwrapper injects
+# -D_FORTIFY_SOURCE=2, causing glibc warnings that configure treats as errors.
+# Suppress the _FORTIFY_SOURCE warning so configure can detect headers properly.
+CONFIGURE_ARGS+=	--disable-werror-always
+CONFIGURE_ENV+=		CPPFLAGS="-I/usr/include -Wno-cpp"
 .endif
 
 .if ${OS_VARIANT} == "SmartOS"
