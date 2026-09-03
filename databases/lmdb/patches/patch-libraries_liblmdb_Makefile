@@ -75,7 +75,7 @@ Use proper install commands.
 -	rm -f liblmdb$(SOEXT); ln -s $@ liblmdb$(SOEXT)
 -	rm -f $(SOVER); ln -s $@ $(SOVER)
 +liblmdb$(SOEXT):	mdb.lo midl.lo module.lo
-+	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -pthread -rpath $(PREFIX)/lib -o $@ mdb.lo midl.lo module.lo $(SOLIBS)
++	$(LIBTOOL) --mode=link --tag=CC $(CC) $(LDFLAGS) -pthread -rpath $(PREFIX)/lib -o $@ mdb.lo midl.lo module.lo $(SOLIBS) $(LDL)
  
 -mdb_stat: mdb_stat.o liblmdb.a
 -	$(CC) $(LDFLAGS) -o $@ $^ $(LDL)
