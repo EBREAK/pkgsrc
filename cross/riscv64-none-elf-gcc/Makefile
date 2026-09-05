@@ -59,9 +59,18 @@ INFO_FILES=		yes
 post-extract:
 	${LN} -s ${WRKDIR}/newlib-${NEWLIBVER}/newlib ${WRKSRC}/newlib
 	${LN} -s ${WRKDIR}/newlib-${NEWLIBVER}/libgloss ${WRKSRC}/libgloss
+	${ECHO} 'MULTILIB_OPTIONS = march=rv32i/march=rv32ic/march=rv32im/march=rv32imc/march=rv32iac/march=rv32imac/march=rv32imafc/march=rv32imafdc/march=rv32gc/march=rv64imac/march=rv64imafdc/march=rv64gc/march=rv32ec/march=rv32emc/march=rv32imac_zba_zbb_zbs/march=rv32imafc_zba_zbb_zbs mabi=ilp32/mabi=ilp32f/mabi=lp64/mabi=lp64d/mabi=ilp32e' > ${WRKSRC}/gcc/config/riscv/t-elf-multilib
+	${ECHO} 'MULTILIB_DIRNAMES = rv32i rv32ic rv32im rv32imc rv32iac rv32imac rv32imafc rv32imafdc rv32gc rv64imac rv64imafdc rv64gc rv32ec rv32emc rv32imac_zba_zbb_zbs rv32imafc_zba_zbb_zbs ilp32 ilp32f lp64 lp64d ilp32e' >> ${WRKSRC}/gcc/config/riscv/t-elf-multilib
+	${ECHO} 'MULTILIB_REQUIRED = march=rv32i/mabi=ilp32 march=rv32im/mabi=ilp32 march=rv32iac/mabi=ilp32 march=rv32imac/mabi=ilp32 march=rv32imafc/mabi=ilp32f march=rv64imac/mabi=lp64 march=rv64imafdc/mabi=lp64d march=rv32ec/mabi=ilp32e march=rv32emc/mabi=ilp32e march=rv32imac_zba_zbb_zbs/mabi=ilp32 march=rv32imafc_zba_zbb_zbs/mabi=ilp32f' >> ${WRKSRC}/gcc/config/riscv/t-elf-multilib
+	${ECHO} 'MULTILIB_REUSE = march.rv32i/mabi.ilp32=march.rv32ic/mabi.ilp32 march.rv32im/mabi.ilp32=march.rv32imc/mabi.ilp32 march.rv32imafc/mabi.ilp32f=march.rv32imafdc/mabi.ilp32f march.rv32imafc/mabi.ilp32f=march.rv32gc/mabi.ilp32f march.rv64imafdc/mabi.lp64d=march.rv64gc/mabi.lp64d' >> ${WRKSRC}/gcc/config/riscv/t-elf-multilib
 
+# _FORTIFY_SOURCE without -O causes #warning on stderr during cc -E,
+# which breaks autoconf header detection (e.g. fcntl.h, sys/mman.h).
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+	${RUN} ${SED} -i '/^prepend=-D_FORTIFY_SOURCE=/d' \
+		${WRKDIR}/.cwrapper/config/cc \
+		${WRKDIR}/.cwrapper/config/c++
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"

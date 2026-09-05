@@ -1,16 +1,13 @@
-$NetBSD: patch-libcc1_configure,v 1.1 2024/03/18 17:39:35 dogcow Exp $
+$NetBSD$
 
-Disable multi-os install dir for libcc1
+Disable multi-os install dir for libcc1.
 
---- libcc1/configure.orig	2014-11-21 16:49:17.000000000 +0000
+--- libcc1/configure.orig	2025-04-20 20:10:32.000000000 +0000
 +++ libcc1/configure
-@@ -14366,9 +14366,6 @@ fi
- 
+@@ -15046,6 +15046,3 @@
  
  libsuffix=
 -if test "$GXX" = yes; then
 -  libsuffix=`$CXX -print-multi-os-directory`
 -fi
  
- 
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for socket libraries" >&5
