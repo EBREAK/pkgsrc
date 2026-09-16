@@ -20,6 +20,12 @@ USE_LANGUAGES=	c c++
 PKGSRC_OVERRIDE_MKPIE=	yes
 CHECK_PIE_SUPPORTED=	no
 
+# The bundled libiberty uses a pre-autoconf-2.60 configure which checks for
+# headers with the preprocessor only.  -D_FORTIFY_SOURCE=2 without -O makes
+# glibc emit a #warning, which is treated as a failure, so HAVE_LIMITS_H
+# and friends end up undefined and the build fails in fibheap.c.
+PKGSRC_USE_FORTIFY=	no
+
 # XXX - This HACK circumvent a problem with the use of yacc that breaks the
 # XXX - building process of sdcc.  Use of bison fixes this problem for now.
 #

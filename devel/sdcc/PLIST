@@ -43,7 +43,7 @@ bin/ucsim_stm8
 bin/ucsim_tlcs
 bin/ucsim_xa
 bin/ucsim_z80
-libexec/sdcc/x86_64--netbsd/12.1.0/cc1
+libexec/sdcc/${MACHINE_GNU_PLATFORM}/12.1.0/cc1
 man/man1/serialview.1
 man/man1/ucsim.1
 share/doc/sdcc/INSTALL.txt
