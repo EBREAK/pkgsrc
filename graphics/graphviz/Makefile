@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sharp
 CONFIGURE_ARGS+=	--enable-ltdl
 CONFIGURE_ARGS+=	--enable-rpath
+CONFIGURE_ARGS+=	--without-aalib
 CONFIGURE_ARGS+=	--without-ann
 CONFIGURE_ARGS+=	--without-devil
 CONFIGURE_ARGS+=	--without-gdiplus
