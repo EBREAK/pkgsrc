@@ -1,0 +1,3 @@
+wlink is a command-line tool for the WCH-Link and WCH-LinkE
+debuggers, providing flashing, debugging and chip inspection for
+WCH RISC-V microcontrollers such as the CH32V series.
