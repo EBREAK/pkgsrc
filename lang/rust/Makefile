@@ -112,6 +112,14 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 .endif
 
+# On Linux do not add -L for the gcc library directory via RUSTFLAGS: gcc
+# places all driver-level -L arguments ahead of any -L derived from -B in
+# the linker command line, so such a flag (e.g. -L/usr/lib64 on Slackware,
+# which ships a "nongnu" libunwind without the _Unwind_* ABI in its
+# libunwind.so) would shadow pkgsrc's LLVM libunwind, which rust links
+# as -lunwind when configured with --llvm-libunwind=system.  libgcc_s is
+# found anyway via the compiler's built-in search directories.
+
 # TODO: Hack introduced for 1.86.0 as @loader_path is stripped from the
 # bootstrap compiler arguments and the stage1 libraries cannot be found.
 # Ideally this should be inserted only in the necessary points of the
