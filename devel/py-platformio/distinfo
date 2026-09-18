@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (platformio-6.1.19.tar.gz) = f86d85d6b9fce33973a37c6aa1497a260128bd47c61161638aa11f612472c26f
+SHA512 (platformio-6.1.19.tar.gz) = 54ed92c42566b86e77c1c0481cb983781e0f76ea82e106f6d1bb5af7a9c0f11dfcc148bfdf9a8c3152815b1ff57515c537930eaf105056f24f4b3ca06ee6c808
+Size (platformio-6.1.19.tar.gz) = 240844 bytes

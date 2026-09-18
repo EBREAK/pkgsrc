@@ -1,0 +1,6 @@
+PlatformIO is a professional collaborative platform for embedded
+development. It provides a cross-platform IDE, unified debugger,
+static code analyzer, and remote unit testing for embedded systems.
+
+PlatformIO supports multiple development platforms, frameworks,
+and boards including Arduino, ESP32, STM32, RISC-V, and many more.
