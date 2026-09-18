@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (agamemnon-0.3.0.tar.gz) = 907ae96b1b2b78058c218ad0fd97d3d35d75c961a5b5be695dc1935fd0f71acc
+SHA512 (agamemnon-0.3.0.tar.gz) = 7af073b591d7ed5697bb06c81d8b0b49176cd9a8077ce00b240fe8c5ed6e0515377e3a687692fe681d650efea34557d5d3b0b7f02dc85463f1742aa33ce252fe
+Size (agamemnon-0.3.0.tar.gz) = 24290855 bytes

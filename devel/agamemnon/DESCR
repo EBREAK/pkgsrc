@@ -1,0 +1,15 @@
+AGaMEMnon is an open SDK, FPGA toolchain, and English documentation for
+the AGM AG32 RISC-V MCU with embedded AGRV2K fabric.
+
+This is IceStorm for a chip nobody has heard of. Verilog synthesizes,
+places, routes, and runs on real silicon: combinational and sequential
+logic, counters and state machines, clocking across the array, output
+to real pins, and the RISC-V core reading and writing the fabric over
+its memory bus.
+
+Features:
+- Complete reverse-engineering of the vendor af.exe tool
+- Yosys -> nextpnr -> bitgen flow for FPGA fabric
+- RISC-V GCC toolchain for MCU firmware
+- OpenOCD programming via SWD/DAP
+- Silicon-validated on AG32VF303-L48
