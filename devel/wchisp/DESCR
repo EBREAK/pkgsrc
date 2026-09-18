@@ -1,0 +1,4 @@
+wchisp is a command-line implementation of WCHISPTool, used for
+flashing firmware onto WCH (Nanjing Qinheng Microelectronics)
+microcontrollers such as the CH32V, CH32X, CH55x and CH58x series,
+over USB or UART.
