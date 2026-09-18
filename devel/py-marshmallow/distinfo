@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (marshmallow-3.26.2.tar.gz) = c52561c6ff9bd940ebdbe3e29b2c7e20076d15ba292666ee1e262a8f1f430cb4
+SHA512 (marshmallow-3.26.2.tar.gz) = 022e656f4964abf0378f597b2c1dba9d4296e5710e4efb5c4ba25254435d4618bf21f1f8bb181b4fb613dbffe3dec76b97d191db9496441139b7698e8448ba00
+Size (marshmallow-3.26.2.tar.gz) = 222095 bytes
