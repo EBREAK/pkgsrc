@@ -17,6 +17,9 @@ DEPENDS+=	lemon-[0-9]*:../../devel/lemon
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_APPLICATION_BUNDLE=OFF
 CMAKE_CONFIGURE_ARGS+=		-DVCSVERSION_OVERRIDE=${PKGVERSION_NOREV}
+# The sbc codec library is not packaged in pkgsrc; make sure the codec
+# plugin is not built against a system copy found by CMake.
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_SBC=OFF
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config bison lex
