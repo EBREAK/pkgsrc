@@ -1,0 +1,25 @@
+$NetBSD$
+
+Only look for -lsocket / -lnsl on Solaris and Illumos, where networking
+code is split out of libc.  On Linux glibc, finding the tirpc-based
+libnsl.so.2 drags in libtirpc, whose versioned gssapi references cannot
+be resolved against pkgsrc's libgssapi_krb5, breaking the g-ir-scanner
+link step.
+
+--- meson.build.orig	2026-08-05 19:59:39.000000000 +0000
++++ meson.build
+@@ -590,12 +590,12 @@ rt_lib = cc.find_library('rt', required
+ # etc. probably needs to include network_deps
+ #
+ socket_lib = cc.find_library('socket', required: false)
+ nsl_lib    = cc.find_library('nsl',    required: false)
+ network_deps = []
+-if socket_lib.found()
++if host_system == 'sunos' and socket_lib.found()
+   network_deps += socket_lib
+ endif
+-if nsl_lib.found()
++if host_system == 'sunos' and nsl_lib.found()
+   network_deps += nsl_lib
+ endif
+ 
