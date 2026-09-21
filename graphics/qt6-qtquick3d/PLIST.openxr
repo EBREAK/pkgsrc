@@ -1,7 +1,6 @@
 @comment $NetBSD: PLIST.openxr,v 1.5 2026/04/30 06:38:39 adam Exp $
 lib/pkgconfig/Qt6Quick3DXr.pc
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qabstractopenxrgraphics_p.h
-qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrgraphics_metal_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrhelpers_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrinputmanager_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrplatform_p.h
@@ -66,7 +65,7 @@ qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateTargetsPrecheck.cmake
 qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateVersionlessTargets.cmake
 qt6/lib/libQt6BundledOpenXR.a
-qt6/lib/libQt6Quick3DXr.${PKGVERSION}.so
+qt6/lib/libQt6Quick3DXr.so.${PKGVERSION}
 qt6/lib/libQt6Quick3DXr.prl
 qt6/lib/libQt6Quick3DXr.so
 qt6/lib/libQt6Quick3DXr.so.6

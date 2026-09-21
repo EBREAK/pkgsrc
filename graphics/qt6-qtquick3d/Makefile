@@ -21,10 +21,11 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DRuntimeRender.pc
 PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DUtils.pc
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) \
- || !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) \
- || !empty(MACHINE_PLATFORM:MLinux-*-aarch64) \
+ || !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
+PLIST_SRC=	PLIST PLIST.embree PLIST.openxr PLIST.openxr-darwin
+.elif !empty(MACHINE_PLATFORM:MLinux-*-aarch64) \
  || !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-PLIST_SRC=	PLIST PLIST.embree PLIST.openxr
+PLIST_SRC=	PLIST PLIST.embree PLIST.openxr PLIST.openxr-linux
 .endif
 
 .include "../../graphics/qt6-qtquicktimeline/buildlink3.mk"

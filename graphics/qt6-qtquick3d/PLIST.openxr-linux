@@ -1,0 +1,3 @@
+@comment $NetBSD$
+qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrgraphics_opengl_p.h
+qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrgraphics_vulkan_p.h

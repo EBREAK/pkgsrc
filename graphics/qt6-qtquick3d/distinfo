@@ -5,3 +5,6 @@ SHA512 (qtquick3d-everywhere-src-6.11.2.tar.xz) = cde5efde9579744a79e857ab771b0f
 Size (qtquick3d-everywhere-src-6.11.2.tar.xz) = 69948340 bytes
 SHA1 (patch-src_3rdparty_xatlas_xatlas.cpp) = 1f6741c74d1b88dc454f188e4756673d4ae80fa2
 SHA1 (patch-src_helpers_proceduralskytexturedata.cpp) = 82b23567218170b016385135d0854bd6c6a544c8
+SHA1 (patch-src_xr_quick3dxr_openxr_qopenxrgraphics_opengl.cpp) = a36dc06872268975c23c24a8f71f26a4c29b6455
+SHA1 (patch-src_xr_quick3dxr_openxr_qopenxrgraphics_opengles.cpp) = 0391367b467b67a0bfb8babcd65cec3b1b842cb9
+SHA1 (patch-src_xr_quick3dxr_openxr_qopenxrgraphics_vulkan.cpp) = 1371e6f9682c16f9e58eadc5be88eaa28038211c
