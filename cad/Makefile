@@ -42,6 +42,7 @@ SUBDIR+=	librecad
 SUBDIR+=	libredwg
 SUBDIR+=	libserialport
 SUBDIR+=	libsigrok
+SUBDIR+=	libsigrokdecode
 SUBDIR+=	libwcalc
 SUBDIR+=	magic
 SUBDIR+=	mcalc

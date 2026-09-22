@@ -1,0 +1,7 @@
+libsigrokdecode is a shared library written in C, which is part of the
+sigrok signal analysis software suite. It provides the API to run
+protocol decoders written in Python, which are used to decode captured
+signals from logic analyzers and other measurement devices.
+
+The protocol decoders themselves are installed under
+share/libsigrokdecode/decoders/.
