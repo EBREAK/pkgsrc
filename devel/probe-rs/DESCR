@@ -1,0 +1,13 @@
+probe-rs is a toolkit for flashing and debugging embedded
+microcontrollers.  It supports a wide range of debug probes
+(CMSIS-DAP/DAPLink, ST-Link, J-Link, FTDI, WCH-Link, Black Magic Probe,
+etc.) and targets ARM Cortex-M, RISC-V and Xtensa cores.
+
+The package installs:
+
+  * probe-rs       - CLI for flashing, debugging, RTT/defmt logging,
+                     semihosting and running GDB/DAP servers
+  * cargo-flash    - `cargo flash` frontend for probe-rs
+  * cargo-embed    - `cargo embed` frontend with RTT/GDB integration
+  * target-gen     - generates probe-rs target descriptions from
+                     CMSIS-SVD files

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/cargo-embed
+bin/cargo-flash
+bin/probe-rs
+bin/target-gen
