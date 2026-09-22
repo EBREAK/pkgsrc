@@ -1,0 +1,8 @@
+$NetBSD$
+
+BLAKE2s (pulseview-0.4.2.tar.gz) = cf3b085ca4af3801b2b55f7ad4241829c3d5a3eef902a645c5b79e3f90bd2c00
+SHA512 (pulseview-0.4.2.tar.gz) = 79f653c9faad021c03b59b4a519b594190d5558dfb9be60cabcc2a35e991e66b733b337fec58a9248699e7aef0df3be1472c81f93274b25cec1fc6b73f8f033b
+Size (pulseview-0.4.2.tar.gz) = 1399718 bytes
+SHA1 (patch-pv_data_decode_annotation.cpp) = 01dab57d96662793da08042790c3f07f66f0281a
+SHA1 (patch-pv_util.cpp) = ccc83def498290aa71aaae0241a25580114fb28f
+SHA1 (patch-pv_views_trace_decodetrace.cpp) = 9b8c076ce642853d655f56dede0cb9520fdbf421

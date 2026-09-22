@@ -1,0 +1,22 @@
+@comment $NetBSD$
+bin/pulseview
+man/man1/pulseview.1
+share/applications/org.sigrok.PulseView.desktop
+share/doc/pulseview/images/device_selector.png
+share/doc/pulseview/images/device_selector_dropdown.png
+share/doc/pulseview/images/device_selector_scan.png
+share/doc/pulseview/images/pv_after_startup.png
+share/doc/pulseview/images/pv_analysis.png
+share/doc/pulseview/images/pv_conversion_a2l.png
+share/doc/pulseview/images/pv_cursors_markers.png
+share/doc/pulseview/images/pv_decoders_1.png
+share/doc/pulseview/images/pv_decoders_2.png
+share/doc/pulseview/images/pv_decoders_3.png
+share/doc/pulseview/images/pv_decoders_4.png
+share/doc/pulseview/images/pv_device_config.png
+share/doc/pulseview/images/pv_import.png
+share/doc/pulseview/images/pv_nodevice.png
+share/doc/pulseview/images/top_bar.png
+share/icons/hicolor/48x48/apps/pulseview.png
+share/icons/hicolor/scalable/apps/pulseview.svg
+share/metainfo/org.sigrok.PulseView.appdata.xml

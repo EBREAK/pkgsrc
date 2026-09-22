@@ -57,6 +57,7 @@ SUBDIR+=	occt
 SUBDIR+=	openscad
 SUBDIR+=	p5-gds2
 SUBDIR+=	pcb
+SUBDIR+=	pulseview
 SUBDIR+=	py-MyHDL
 SUBDIR+=	py-PyRTL
 SUBDIR+=	py-gds

@@ -1,0 +1,6 @@
+PulseView is a Qt-based GUI frontend for the sigrok signal analysis
+software suite. It is an instrument viewer for logic analyzers,
+oscilloscopes, and other supported measurement devices, and it can
+also open capture files in various formats. Captured signals can be
+inspected graphically and annotated with the output of the sigrok
+protocol decoders.
