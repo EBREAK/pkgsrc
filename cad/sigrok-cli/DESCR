@@ -1,0 +1,5 @@
+sigrok-cli is a command-line frontend for the sigrok signal analysis
+software suite. It is able to drive and acquire data from supported
+logic analyzers, oscilloscopes, multimeters, and other measurement
+devices, show a protocol decoder listing of the captured data, or
+save it to a file in various formats.

@@ -67,6 +67,7 @@ SUBDIR+=	qcad
 SUBDIR+=	qcad-partlibrary
 SUBDIR+=	qucs-s
 SUBDIR+=	sci-wcalc
+SUBDIR+=	sigrok-cli
 SUBDIR+=	solvespace
 SUBDIR+=	spice
 SUBDIR+=	spiceprm
