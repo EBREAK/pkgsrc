@@ -1,0 +1,20 @@
+$NetBSD$
+
+Rename the info file and its directory entry so that they do not clash
+with devel/openocd.
+
+--- doc/openocd.texi.orig	2026-03-18 14:32:57.000000000 +0000
++++ doc/openocd.texi
+@@ -1,10 +1,10 @@
+ \input texinfo @c -*-texinfo-*-
+ @c %**start of header
+-@setfilename openocd.info
++@setfilename openocd-rpi.info
+ @settitle OpenOCD User's Guide
+ @dircategory Development
+ @direntry
+-* OpenOCD: (openocd).      OpenOCD User's Guide
++* OpenOCD-rpi: (openocd-rpi).      OpenOCD User's Guide
+ @end direntry
+ @paragraphindent 0
+ @c %**end of header

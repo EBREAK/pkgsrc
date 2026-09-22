@@ -1,0 +1,15 @@
+$NetBSD$
+
+Fix build on POSIX sh: "==" is not a valid test(1) operator.
+
+--- configure.ac.orig	2026-03-18 14:32:57.000000000 +0000
++++ configure.ac
+@@ -636,7 +636,7 @@
+ 	])
+ ])
+ 
+-AS_IF([test "x$enable_capstone" == xno], [
++AS_IF([test "x$enable_capstone" = xno], [
+ 	AC_DEFINE([HAVE_CAPSTONE], [0], [0 if you don't have Capstone disassembly framework.])
+ ])
+ 

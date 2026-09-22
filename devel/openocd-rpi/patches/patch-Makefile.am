@@ -1,0 +1,22 @@
+$NetBSD$
+
+Install the Tcl scripts and contrib data under share/openocd-rpi instead
+of share/openocd so that this fork can coexist with devel/openocd.
+The compiled-in script search path (PKGDATADIR) and the OpenULINK and
+ANGIE firmware installation paths all derive from pkgdatadir.
+
+--- Makefile.am.orig	2026-03-18 14:32:57.000000000 +0000
++++ Makefile.am
+@@ -12,6 +12,12 @@
+ # do not run Jim Tcl tests (esp. during distcheck)
+ check-recursive: SUBDIRS := $(SUBDIRS:jimtcl=)
+ 
++# pkgsrc: use a private data directory (share/openocd-rpi) instead of
++# share/openocd so that this fork does not clash with devel/openocd.
++# The compiled-in script search path (PKGDATADIR) and the OpenULINK and
++# ANGIE firmware installation paths all derive from pkgdatadir.
++pkgdatadir = $(datadir)/openocd-rpi
++
+ nobase_dist_pkgdata_DATA = \
+ 	contrib/libdcc/dcc_stdio.c \
+ 	contrib/libdcc/dcc_stdio.h \

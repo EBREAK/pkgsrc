@@ -1,0 +1,12 @@
+OpenOCD (Open On-Chip Debugger) provides JTAG/SWD debugging and
+in-system programming for embedded targets, with GDB server, telnet
+and Tcl interfaces.
+
+This is the Raspberry Pi downstream fork of OpenOCD.  Compared to
+devel/openocd it adds support for Pico-series devices (RP2040 and
+RP2350), the picoprobe and Raspberry Pi Debug Probe adapters, CMSIS-DAP
+multi-DAP, and other Raspberry Pi specific enhancements.
+
+The program is installed as "openocd-rpi" and data files are installed
+under share/openocd-rpi, so this package can be installed alongside
+devel/openocd.
