@@ -41,6 +41,7 @@ SUBDIR+=	klayout
 SUBDIR+=	librecad
 SUBDIR+=	libredwg
 SUBDIR+=	libserialport
+SUBDIR+=	libsigrok
 SUBDIR+=	libwcalc
 SUBDIR+=	magic
 SUBDIR+=	mcalc

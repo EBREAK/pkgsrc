@@ -1,0 +1,12 @@
+libsigrok is a shared library written in C, which is part of the sigrok
+signal analysis software suite. It handles the supported devices and
+provides a uniform API for the various sigrok frontends.
+
+It supports logic analyzers, oscilloscopes, multimeters, LCR meters,
+sound level meters, thermometers, dataloggers, and other types of
+measurement devices, connected via USB, serial ports, network, or
+Bluetooth.
+
+Sample udev rules for USB device access are installed under
+share/examples/libsigrok/ and may need to be copied to the system udev
+rules directory on Linux for non-root access to USB devices.

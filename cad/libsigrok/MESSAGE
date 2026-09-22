@@ -1,0 +1,13 @@
+Message from libsigrok-0.5.2:
+
+On Linux, you may need to install udev rules for non-root access to
+USB-based measurement devices. Example rules are installed at:
+
+	${PREFIX}/share/examples/libsigrok/60-libsigrok.rules
+	${PREFIX}/share/examples/libsigrok/61-libsigrok-plugdev.rules
+	${PREFIX}/share/examples/libsigrok/61-libsigrok-uaccess.rules
+
+Copy the ones appropriate for your setup to your system udev rules
+directory (e.g. /etc/udev/rules.d/) and reload the rules with:
+
+	udevadm control --reload-rules && udevadm trigger
