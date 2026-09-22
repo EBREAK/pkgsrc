@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/libserialport.h
+lib/libserialport.la
+lib/pkgconfig/libserialport.pc

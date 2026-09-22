@@ -1,0 +1,5 @@
+libserialport is an open source, cross-platform shared library written in C,
+that implements support for the serial ports of all kinds of devices, e.g.
+logic analyzers or oscilloscopes.
+
+It is part of the sigrok signal analysis software suite.

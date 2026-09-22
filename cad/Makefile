@@ -40,6 +40,7 @@ SUBDIR+=	kicad-templates
 SUBDIR+=	klayout
 SUBDIR+=	librecad
 SUBDIR+=	libredwg
+SUBDIR+=	libserialport
 SUBDIR+=	libwcalc
 SUBDIR+=	magic
 SUBDIR+=	mcalc

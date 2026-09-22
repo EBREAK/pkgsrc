@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (libserialport-0.1.2.tar.gz) = c553a2d0698fc772f75a55ad45b5535e1a9c341d60f19cd590c1f1789a34394b
+SHA512 (libserialport-0.1.2.tar.gz) = 960823ddb30711c39a4f001b6dd2d592a072e8d4256d3ba0a2fdb6c28172c3b6b1504b33cca80765ded5d5add34a73621b5e500ebaa6bb0520faf98b46b903aa
+Size (libserialport-0.1.2.tar.gz) = 470818 bytes
