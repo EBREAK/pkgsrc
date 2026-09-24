@@ -25,6 +25,16 @@ BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 
+# PKGSRC_USE_FORTIFY prepends -D_FORTIFY_SOURCE=2 to every cc invocation,
+# including "cc -E".  Without optimization glibc then emits a #warning,
+# which makes autoconf's preprocessor-only header checks in the build
+# subdir libiberty fail (HAVE_LIMITS_H, HAVE_FCNTL_H, ... are left
+# undefined), breaking the stage 1 build on Linux/glibc.  Drop the flag
+# for this package.
+.if ${OPSYS} == "Linux"
+BUILDLINK_TRANSFORM+=	rm:-D_FORTIFY_SOURCE=2
+.endif
+
 # Work around ld bug in Xcode 15
 .if ${OPSYS} == "Darwin" && ${CC_VERSION:Mclang-15.*}
 LDFLAGS_FOR_TARGET+=	-Wl,-ld_classic
