@@ -24,6 +24,7 @@ CMAKE_CONFIGURE_ARGS+=	-DZIG_SHARED_LLVM=ON
 # avoid full-cpu-features available to build host,
 # in other words ensure that we run everywhere
 CMAKE_CONFIGURE_ARGS+=	-DZIG_TARGET_MCPU=baseline
+CMAKE_CONFIGURE_ARGS+=	"-DZIG_EXTRA_BUILD_ARGS=--maxrss;8000000000"
 #CMAKE_CONFIGURE_ARGS+=	-DZIG_PIE=ON
 
 MAKE_ENV+=	ZIG_GLOBAL_CACHE_DIR=${WRKDIR}/zig-global-cache
