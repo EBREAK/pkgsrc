@@ -1,0 +1,16 @@
+$NetBSD$
+
+Link the C++11 threading primitives check against the thread library.
+Fixes the build on platforms where pthread_create is not in libc
+(e.g. glibc < 2.34).
+
+--- CMakeLists.txt.orig	2026-08-10 03:32:06.000000000 +0000
++++ CMakeLists.txt
+@@ -554,6 +554,7 @@
+     # Will silently fall back to a lower standard version if not available
+     set( CMAKE_CXX_STANDARD 17 )
+     include( CheckCXXSourceCompiles )
++    set( CMAKE_REQUIRED_LIBRARIES ${CMAKE_THREAD_LIBS_INIT} )
+     check_cxx_source_compiles( "#include <condition_variable>
+     #include <mutex>
+     #include <thread>

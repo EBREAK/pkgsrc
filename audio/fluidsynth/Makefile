@@ -21,6 +21,9 @@ CMAKE_CONFIGURE_ARGS+=	-DLIB_SUFFIX=""
 CMAKE_CONFIGURE_ARGS+=	-Denable-framework=OFF
 # Compile without glib2
 CMAKE_CONFIGURE_ARGS+=	-Dosal=cpp11 -Denable-libinstpatch=0
+# Disabled: no pipewire package in pkgsrc yet, and the driver requires
+# new pipewire headers (PW_KEY_NODE_ASYNC).  Do not pick up the host's.
+CMAKE_CONFIGURE_ARGS+=	-Denable-pipewire=OFF
 
 PKGCONFIG_OVERRIDE=	fluidsynth.pc.in
 
