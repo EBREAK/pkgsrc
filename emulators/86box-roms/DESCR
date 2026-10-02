@@ -1,0 +1,10 @@
+The ROM set for the 86Box emulator: BIOS, option ROM and font images
+for most machines and devices supported by 86Box, including systems
+from IBM, Compaq, Amstrad, Tandy, Olivetti, Packard Bell and many
+others.
+
+The ROMs are installed into share/86Box/roms, which is one of the
+default search paths of 86Box.
+
+All files in this set are the property of their respective copyright
+owners and are made available in the interest of preservation.
