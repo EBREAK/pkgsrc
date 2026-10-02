@@ -3,7 +3,7 @@
 PKG_OPTIONS_VAR=		PKG_OPTIONS.flycast
 
 PKG_SUPPORTED_OPTIONS+=		alsa pulseaudio
-PKG_SUGGESTED_OPTIONS.Linux+=	alsa
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa pulseaudio
 
 .include "../../mk/bsd.fast.prefs.mk"
 
