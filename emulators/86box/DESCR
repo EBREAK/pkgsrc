@@ -1,0 +1,13 @@
+86Box is a low level x86 emulator that specializes in running old
+operating systems and software designed for IBM PC systems and
+compatibles from 1981 through fairly recent system designs based on
+the PCI bus.
+
+Features include low level emulation of 8086-based processors up to
+the Mendocino-era Celeron, a large range of customizable virtual
+machines (from the IBM PC 5150 to various PS/2 models), and support
+for many video adapters, sound cards, network adapters, hard disk
+controllers and SCSI adapters.
+
+The machine ROMs are provided by the separate emulators/86box-roms
+package.

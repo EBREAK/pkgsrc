@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD$
+
+86Box requires a ROM set to emulate most machines.  Install the
+emulators/86box-roms package, which installs the ROMs into
+${PREFIX}/share/86Box/roms, one of 86Box's default search paths.
+
+If 86Box does not find the ROMs, make sure XDG_DATA_DIRS includes
+${PREFIX}/share (pkgsrc's Qt5 adds it automatically when the
+XDG_DATA_DIRS environment variable is unset), or point 86Box at the
+ROM directory using the "--rompath" command line option or the
+"rom_path" setting in 86box.cfg.
+
+===========================================================================

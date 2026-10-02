@@ -4,6 +4,7 @@
 COMMENT=	Emulators for other machines and systems
 
 SUBDIR+=	8086tiny
+SUBDIR+=	86box
 SUBDIR+=	86box-roms
 SUBDIR+=	BasiliskII
 SUBDIR+=	Cygne-SDL
