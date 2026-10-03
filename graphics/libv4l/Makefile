@@ -80,5 +80,6 @@ post-install:
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/argp/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
