@@ -46,6 +46,8 @@ CONFIGURE_ARGS+=	--without-udev
 CONFIGURE_ARGS+=	--without-v4l2
 CONFIGURE_ARGS+=	--without-vkd3d
 CONFIGURE_ARGS+=	--without-vulkan
+# The wayland driver is not packaged in pkgsrc; do not pick up the host's.
+CONFIGURE_ARGS+=	--without-wayland
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -77,7 +79,20 @@ CONFIGURE_ENV+=		wine_cv_linux_gethostbyname_r_6=no
 
 .include "../../mk/oss.buildlink3.mk"
 
+# Wine requires OSSv4 (oss_sysinfo). Plain kernel OSS headers (OSSv3, e.g.
+# sys/soundcard.h on Linux) are found by oss.buildlink3.mk but rejected by
+# wine's configure ("OSS too old"), so only claim OSS support when the
+# headers provide oss_sysinfo, mirroring wine's own test.
+OSS_V4=		no
 .if ${OSS_TYPE} != "none"
+OSS_V4!=	for h in ${H_SOUNDCARD} /usr/lib/oss/include/sys/soundcard.h; do \
+			if ${TEST} -f "$$h" && ${GREP} -q oss_sysinfo "$$h" 2>/dev/null; then \
+				${ECHO} yes; exit 0; \
+			fi; \
+		done; ${ECHO} no
+.endif
+
+.if ${OSS_V4} == "yes"
 PLIST.oss=		yes
 LDFLAGS+=		${LIBOSSAUDIO}
 SUBST_CLASSES+=		oss
