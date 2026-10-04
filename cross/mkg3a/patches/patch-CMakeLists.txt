@@ -1,0 +1,12 @@
+$NetBSD$
+
+Declare the project as C-only: mkg3a is written in C, and the default
+C/C++ project() triggers a C++ compiler test that fails under pkgsrc
+compiler wrappers.
+
+--- CMakeLists.txt.orig	2026-03-22 00:00:00.000000000 +0000
++++ CMakeLists.txt
+@@ -1,2 +1,2 @@
+ cmake_minimum_required (VERSION 3.31)
+-project (mkg3a)
++project (mkg3a LANGUAGES C)

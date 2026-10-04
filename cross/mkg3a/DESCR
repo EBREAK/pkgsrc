@@ -1,0 +1,5 @@
+mkg3a packs a raw big-endian SuperH binary together with two 92x64 icons
+into a Casio fx-CG (Prizm) add-in (.g3a) file, computing all header
+fields and checksums.  Also installs g3a-updateicon to replace the
+icons in an existing .g3a.  Useful for bare-metal development on Casio
+fx-9860G II / fx-CG graphing calculators.

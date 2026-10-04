@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (mkg3a-0.5.1.tar.gz) = 568f8b61ec71bfce30edf4ab92ad271299c922315577600fa8f7cb60716dc6aa
+SHA512 (mkg3a-0.5.1.tar.gz) = f8e9f43bcbbe38b787c529e4c0c4138adcfd3ce39bc97ba6edf48dd28aab51fa649d2e15a6d61f7d40cb5445da7295351777d0b3efb9661d00b9d3ac6bbf7e15
+Size (mkg3a-0.5.1.tar.gz) = 18291 bytes
+SHA1 (patch-CMakeLists.txt) = 118f0329fd49814c8c2acd4d5d610b6663d001e2

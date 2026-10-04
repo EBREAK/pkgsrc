@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/g3a-updateicon
+bin/mkg3a
+share/man/man1/mkg3a.1.gz

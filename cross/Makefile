@@ -81,6 +81,7 @@ SUBDIR+=	mingw-w64-x86_64-headers-msvcrt
 SUBDIR+=	mingw-w64-x86_64-winpthreads
 SUBDIR+=	mipsel-none-elf-binutils
 SUBDIR+=	mipsel-none-elf-gcc
+SUBDIR+=        mkg3a
 SUBDIR+=	objconv
 SUBDIR+=	or1k-none-elf-binutils
 SUBDIR+=	or1k-none-elf-gcc
