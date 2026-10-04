@@ -94,6 +94,7 @@ SUBDIR+=	ppc-morphos-gcc
 SUBDIR+=	ppc-morphos-sdk
 SUBDIR+=	riscv64-none-elf-binutils
 SUBDIR+=	riscv64-none-elf-gcc
+SUBDIR+=	sh3eb-elf-binutils
 SUBDIR+=	stlink
 SUBDIR+=	uisp
 SUBDIR+=	xtensa-esp-elf-binutils

@@ -1,0 +1,4 @@
+GNU binutils cross tools (as, ld, objcopy, objdump, ...) for the
+Renesas SuperH family in big-endian mode (sh3eb-elf).  Intended for
+bare-metal development on Casio fx-9860G / fx-CG series graphing
+calculators (SH7333/SH7305, SH-3E/SH-4A cores strapped big-endian).
